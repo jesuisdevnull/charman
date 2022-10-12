@@ -8,7 +8,7 @@
     <body>
         <div class="d-flex align-items-center vh-100" style="background-image:url(./img/back.jpg);">
  	    <div class="container-md border rounded bg-light">
-		<form class="d-flex flex-column mx-5 my-5 px-3" method="POST" action="./classes/controllers/signup.controller.php">
+		<form class="d-flex flex-column mx-5 my-5 px-3" method="POST" action="includes/signup_process.php">
 		    <h1>Create an account</h1>
 	            <label for="username">Username</label>
 		    <input type="text" class="mb-2 form-control" id="username" name="username" required>
@@ -18,7 +18,7 @@
 		    <input type="password" class="mb-2 form-control" id="password" name="password" required>
 		    <label for="passwordRepeat">Password (repeat)</label>
 		    <input type="password" class="md-2 form-control" id="passwordRepeat" name="passwordRepeat" required>
-		    <button type="submit" class="btn btn-dark mt-4" >Register</button>
+		    <button type="submit" name="submit" class="btn btn-dark mt-4" >Register</button>
 		    <a href="./index.php" class="d-block mt-2 btn btn-primary text-decoration-none">Return to homepage</a>
 	        </form>
 	    </div>
