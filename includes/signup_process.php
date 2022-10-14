@@ -21,7 +21,8 @@ if(isset($_POST['submit'])){
 	    header("Location: ../signup.php?alert=invalidPassword");
         exit();	
 	}
-
+    
+    $controller->registerUser($_POST["username"],$_POST["password"],$_POST["email"]);
     header("Location: ../index.php?alert=succesfulRegistration");
 	exit();	
 }

@@ -18,7 +18,7 @@ class SignupModel extends Dbh {
         return $statement->fetchAll();
     }
 
-    public static function registerUser($email, $username, $plain_password) {
+    public static function registerUser($username, $plain_password, $email) {
         $dbh = parent::connect();
         $statement = $dbh->prepare("INSERT INTO ServiceUser VALUES(:email, :username, :hashed_password, :username)");
         $statement->bindParam(":email",$email);

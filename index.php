@@ -19,7 +19,16 @@
                         <label for="password" class="text-sm-center text-lg-start">Password</label>
                         <input class="mx-1 mb-4 form-control" type="password" id="password" name="password" required>
                         <button class="btn btn-success mt-2 mb-4" type="submit">Login</button>
-		        <p class="text-center mt-1">Don't have an account? <a href="./signup.php">Register here</a><p>
+                        <p class="text-center mt-1">Don't have an account? <a href="./signup.php">Register here</a><p><?php
+                        if(isset($_GET["alert"])){
+                            switch($_GET["alert"]) {
+                            case "succesfulRegistration": $content = "A new user has been registered!";
+                                break;
+                                default: $default = "Success message";  
+                            }
+                            ?><div class="alert alert-success mt-2"><?php echo $content;?></div><?php
+                        }
+            ?>
 		    </form>
                 </div>
             </div>
